@@ -1,0 +1,23 @@
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // path to the csv file
+        string path = @"D:/No_3/product.csv";
+
+            string[] v = System.IO.File.ReadAllLines(path);
+            string[] lines = v;
+        foreach(string line in lines)
+        {
+            string[] columns = line.Split(',');
+            foreach (string column in columns) {
+                // Do something
+                Console.Write(column);
+            }
+        }
+        }
+    }
